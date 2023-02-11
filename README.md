@@ -1,6 +1,6 @@
 # APP Movie **(SPA)**
 Апка для пошуку вітаня за категорією свята<br/>
-[DEMO LINK](https://SergSvet87.github.io/)<br/>
+[DEMO LINK](https://sergsvet87.github.io/happy-holiday/)<br/>
 
 ## Автори проєкту:
  **Сергій Світличний** Front-End Developer, навчаюсь веб-технологіям<br/>
@@ -16,4 +16,4 @@
 ![GitHub](https://img.shields.io/badge/-GitHub-333?style=for-the-badge&logo=GitHub)
 
 ## Додаткові посилання:
-[API](https://yts.mx/api)<br/>
+[API](https://vanilla-legend-factory.glitch.me/api/)<br/>
