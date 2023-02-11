@@ -1,46 +1,15 @@
-import React, { useState, useContext, useEffect } from "react";
-import axios from "axios";
+import React, { useState, useContext } from "react";
 
-import { URI_API } from "../../../const/const";
 import { holidaysContext } from "../../../context/holidaysContext";
 
 import styles from "./Choices.module.css";
 
-// const holidays = {
-//   newyear: "Новый год",
-//   bithdayWomen: "День рождения  Ж",
-//   bithdayMen: "День рождения  М",
-//   womenday: "8 марта",
-//   knowledgeday: "День знаний",
-// };
-
 export const Choices = () => {
   const [isOpenChoices, setIsOpenChoices] = useState(false);
-  const { holiday, setHoliday } = useContext(holidaysContext);
-
-  const [holidays, setHolidays] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(URI_API)
-      // .then((response) => {
-      //   if (response.status !== 200) {
-      //     throw new Error(response.status);
-      //   }
-      // })
-      .then(({data}) => setHolidays(data))
-      .catch( (error) => {
-        console.log(error);
-      });
-  }, []);
+  const { holidays, holiday, changeHolidayText } = useContext(holidaysContext);
 
   const toggleChoices = () => {
     setIsOpenChoices(!isOpenChoices);
-  };
-
-  const changeHolidayText = (title) => {
-    setHoliday(title);
-    toggleChoices();
   };
 
   return (
@@ -49,7 +18,7 @@ export const Choices = () => {
         className={styles.button}
         onClick={toggleChoices}
       >
-        {holiday}
+        {holidays[holiday] || "Выбрать праздник"}
       </button>
       {isOpenChoices && (
         <ul className={styles.list}>
@@ -61,7 +30,8 @@ export const Choices = () => {
               <button
                 className={styles.btn}
                 onClick={() => {
-                  changeHolidayText(item[1]);
+                  changeHolidayText(item[0]);
+                  toggleChoices();
                 }}
               >
                 {item[1]}

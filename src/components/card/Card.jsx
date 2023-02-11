@@ -1,6 +1,5 @@
 import React from "react";
 
-import CardBg from "../../assets/img/card-bg.jpg";
 import { Image } from "./ImageCard/ImageCard";
 import { Felicitation } from "./Felicitation/Felicitation";
 
@@ -11,7 +10,7 @@ export const Card = () => {
     <div className={styles.card}>
       <div className={styles.wrapper}>
         <div className={styles.image}>
-          <Image img={CardBg} />
+          <Image />
           <Felicitation />
         </div>
       </div>

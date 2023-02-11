@@ -1,23 +1,17 @@
-import { createContext, useState } from 'react';
+import { createContext, useContext } from 'react';
+
+import { holidaysContext } from './holidaysContext.js';
+import { useFetch } from '../hooks/useFetch.js';
+import { URI_API } from '../const/const.js';
 
 export const textContext = createContext({});
 
 export const TextContextProvider = ({ children }) => {
-
-  const [text, setText] = useState(`
-    Поздравляю с днем рожденья!
-    Пусть будет жизнь полна веселья,
-    Не будет грусти и хлопот,
-    А только счастье круглый год!
-
-    Желаю творческих успехов,
-    Прекрасных дней, улыбок, смеха.
-    Любви, душевного тепла,
-    Как сказка, чтобы жизнь была!
-  `);
+  const { holiday } = useContext(holidaysContext);
+  const [{ text }] = useFetch(holiday ? `${URI_API}text/${holiday}` : '');
 
   return (
-    <textContext.Provider value={{ text, setText }} >
+    <textContext.Provider value={{ text }} >
       {children}
     </textContext.Provider>
   )

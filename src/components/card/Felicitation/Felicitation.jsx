@@ -8,5 +8,5 @@ import styles from "./Felicitation.module.css";
 export const Felicitation = () => {
   const { text } = useContext(textContext);
 
-  return <p className={styles.felicitation}>{text}</p>;
+  return <p className={styles.felicitation}>{text || 'Выберите повод для поздравления!'}</p>;
 };
