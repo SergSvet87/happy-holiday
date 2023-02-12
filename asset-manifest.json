@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/happy-holiday/static/css/main.c593a1ee.css",
-    "main.js": "/happy-holiday/static/js/main.2b9726d3.js",
+    "main.js": "/happy-holiday/static/js/main.c9eb6818.js",
     "static/media/card-bg.jpg": "/happy-holiday/static/media/card-bg.4dd356a06e9bd5e2a66a.jpg",
     "static/media/open-sans-v29-latin_cyrillic-regular.woff": "/happy-holiday/static/media/open-sans-v29-latin_cyrillic-regular.357fd6edbf9de5d51a91.woff",
     "static/media/open-sans-v29-latin_cyrillic-700.woff": "/happy-holiday/static/media/open-sans-v29-latin_cyrillic-700.e2b5a349bd45093d6993.woff",
@@ -9,10 +9,10 @@
     "static/media/open-sans-v29-latin_cyrillic-700.woff2": "/happy-holiday/static/media/open-sans-v29-latin_cyrillic-700.6a33ff8a2442a9c6eeb9.woff2",
     "index.html": "/happy-holiday/index.html",
     "main.c593a1ee.css.map": "/happy-holiday/static/css/main.c593a1ee.css.map",
-    "main.2b9726d3.js.map": "/happy-holiday/static/js/main.2b9726d3.js.map"
+    "main.c9eb6818.js.map": "/happy-holiday/static/js/main.c9eb6818.js.map"
   },
   "entrypoints": [
     "static/css/main.c593a1ee.css",
-    "static/js/main.2b9726d3.js"
+    "static/js/main.c9eb6818.js"
   ]
 }
