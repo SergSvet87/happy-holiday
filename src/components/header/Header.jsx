@@ -24,7 +24,7 @@ export const Header = () => {
                 dispatch(fetchText(holiday));
               }}
             >
-              Поменять поздравление
+              Змінити поздоровлення
             </button>
             <button
               className={styles.button}
@@ -32,7 +32,7 @@ export const Header = () => {
                 dispatch(fetchImage(holiday));
               }}
             >
-              Поменять фон
+              Змінити фон картки
             </button>
           </div>
 

@@ -1,3 +1,5 @@
+import format from 'date-fns/format';
+
 import { Container } from "../container/Container";
 
 import styles from "./Footer.module.css";
@@ -47,7 +49,7 @@ export const Footer = () => {
         <div className={styles.wrapper}>
           <div className={styles.contacts}>
             <p>
-              Design:{" "}
+              Design:
               <a
                 href="https://t.me/mrsh"
                 target="_blank"
@@ -57,7 +59,7 @@ export const Footer = () => {
               </a>
             </p>
             <p>
-              Developer:{" "}
+              Developer:
               <a
                 href="https://t.me/Serg_svet"
                 target="_blank"
@@ -66,7 +68,7 @@ export const Footer = () => {
                 Serhii Svitlychnyi
               </a>
             </p>
-            <p>© HBCard, 2022</p>
+            <p>© HBCard, {format(new Date(), "yyyy")}</p>
           </div>
 
           <ul className={styles.social}>
