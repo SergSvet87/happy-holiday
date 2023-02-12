@@ -1,16 +1,28 @@
-import React, { useState, useContext } from "react";
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { NavLink } from "react-router-dom";
 
-import { holidaysContext } from "../../../context/holidaysContext";
+import { setHoliday, fetchHolidays } from "../../../store/holidaysSlice.js";
+import { fetchText } from "../../../store/textSlice.js";
+import { fetchImage } from "../../../store/imageSlice.js";
+// import { holidaysContext } from "../../../context/holidaysContext.js";
 
 import styles from "./Choices.module.css";
 
 export const Choices = () => {
   const [isOpenChoices, setIsOpenChoices] = useState(false);
-  const { holidays, holiday, changeHolidayText } = useContext(holidaysContext);
+  const { holiday, holidays, loading } = useSelector((state) => state.holidays);
+  // const { holidays } = useContext(holidaysContext);
+  const dispatch = useDispatch();
 
   const toggleChoices = () => {
+    if (loading !== "success") return;
     setIsOpenChoices(!isOpenChoices);
   };
+
+  useEffect(() => {
+    dispatch(fetchHolidays());
+  }, [dispatch]);
 
   return (
     <div className={styles.wrapper}>
@@ -18,7 +30,9 @@ export const Choices = () => {
         className={styles.button}
         onClick={toggleChoices}
       >
-        {holidays[holiday] || "Выбрать праздник"}
+        {loading !== "success"
+          ? "Завантаження..."
+          : holidays[holiday] || "Виберіть святкування"}
       </button>
       {isOpenChoices && (
         <ul className={styles.list}>
@@ -26,16 +40,19 @@ export const Choices = () => {
             <li
               className={styles.item}
               key={item[0]}
+              onClick={() => {
+                dispatch(setHoliday(item[0]));
+                dispatch(fetchText(item[0]));
+                dispatch(fetchImage(item[0]));
+                toggleChoices();
+              }}
             >
-              <button
-                className={styles.btn}
-                onClick={() => {
-                  changeHolidayText(item[0]);
-                  toggleChoices();
-                }}
+              <NavLink
+                to={`card/${item[0]}`}
+                className={({isActive}) => (isActive ? styles.linkActive : "")}
               >
                 {item[1]}
-              </button>
+              </NavLink>
             </li>
           ))}
         </ul>
