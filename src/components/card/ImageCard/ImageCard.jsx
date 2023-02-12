@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import CardBg from "./img/card-bg.jpg";
+import CardBg from "../../../assets/img/card-bg.jpg";
 // import { imgContext } from "../../../context/imgContext";
 
 export const Image = () => {
