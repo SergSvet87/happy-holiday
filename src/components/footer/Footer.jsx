@@ -7,35 +7,35 @@ const icons = [
     _id: 1,
     name: "linkedin",
     href: "https://www.linkedin.com/in/serhii-svitlychnyi",
-    path: "../../assets/social-icons/linkedin.svg",
+    path: "./social-icons/linkedin.svg",
     size: 24,
   },
   {
     _id: 2,
     name: "telegram",
     href: "https://t.me/Serg_svet",
-    path: "../../assets/social-icons/telegram.svg",
+    path: "./social-icons/telegram.svg",
     size: 28,
   },
   {
     _id: 3,
     name: "gmail",
     href: "mailto:svitlychnyi1905@gmail.com",
-    path: "../../assets/social-icons/gmail.svg",
+    path: "./social-icons/gmail.svg",
     size: 30,
   },
   {
     _id: 4,
     name: "github",
     href: "https://github.com/SergSvet87",
-    path: "../../assets/social-icons/github.svg",
+    path: "./social-icons/github.svg",
     size: 30,
   },
   {
     _id: 5,
     name: "viber",
     href: "viber://chat?number=%2B380976157541",
-    path: "../../assets/social-icons/viber.svg",
+    path: "./social-icons/viber.svg",
     size: 30,
   },
 ];
@@ -83,7 +83,7 @@ export const Footer = () => {
                 >
                   <img
                     src={icon.path}
-                    alt=""
+                    alt={icon.name}
                     width={icon.size}
                     height={icon.size}
                   />

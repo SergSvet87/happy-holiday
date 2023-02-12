@@ -1,5 +1,5 @@
 # APP Movie **(SPA)**
-Апка для пошуку вітаня за категорією свята<br/>
+Апка для пошуку вітання за категорією свята<br/>
 [DEMO LINK](https://sergsvet87.github.io/happy-holiday/)<br/>
 
 ## Автори проєкту:
