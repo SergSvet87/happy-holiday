@@ -1,5 +1,6 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useParams } from 'react-router-dom';
 
 import { fetchText } from "../../store/textSlice.js";
 import { fetchImage } from '../../store/imageSlice.js';
@@ -10,7 +11,7 @@ import styles from "./Header.module.css";
 
 export const Header = () => {
   const dispatch = useDispatch();
-  const { holiday } = useSelector((state) => state.holidays);
+  const { holiday } = useParams();
 
   return (
     <header className={styles.header}>

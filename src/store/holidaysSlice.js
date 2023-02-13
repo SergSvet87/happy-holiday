@@ -14,16 +14,10 @@ export const holidaysSlice = createSlice({
   name: 'holidays',
   initialState: {
     holidays: {},
-    holiday: '',
     error: '',
     loading: '',
   },
   reducers: {
-    setHoliday(state, action) {
-      state.holiday = action.payload;
-    }
-  },
-  extraReducers: {
     [fetchHolidays.pending]: (state) => {
       state.loading = 'loading';
     },
