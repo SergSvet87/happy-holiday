@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/happy-holiday/static/css/main.de15ab5e.css",
-    "main.js": "/happy-holiday/static/js/main.48420d01.js",
+    "main.css": "/happy-holiday/static/css/main.8491bc37.css",
+    "main.js": "/happy-holiday/static/js/main.59a0f8f7.js",
     "static/media/card-bg.jpg": "/happy-holiday/static/media/card-bg.4dd356a06e9bd5e2a66a.jpg",
+    "static/media/BadScript-Regular.ttf": "/happy-holiday/static/media/BadScript-Regular.a7245c626448ab33b310.ttf",
     "static/media/open-sans-v29-latin_cyrillic-regular.woff": "/happy-holiday/static/media/open-sans-v29-latin_cyrillic-regular.357fd6edbf9de5d51a91.woff",
     "static/media/open-sans-v29-latin_cyrillic-700.woff": "/happy-holiday/static/media/open-sans-v29-latin_cyrillic-700.e2b5a349bd45093d6993.woff",
     "static/media/open-sans-v29-latin_cyrillic-regular.woff2": "/happy-holiday/static/media/open-sans-v29-latin_cyrillic-regular.d0378a7641136f5d48e3.woff2",
     "static/media/open-sans-v29-latin_cyrillic-700.woff2": "/happy-holiday/static/media/open-sans-v29-latin_cyrillic-700.6a33ff8a2442a9c6eeb9.woff2",
+    "static/media/dubl.png": "/happy-holiday/static/media/dubl.2fb91e0fe81908ffce2e.png",
     "index.html": "/happy-holiday/index.html",
-    "main.de15ab5e.css.map": "/happy-holiday/static/css/main.de15ab5e.css.map",
-    "main.48420d01.js.map": "/happy-holiday/static/js/main.48420d01.js.map"
+    "main.8491bc37.css.map": "/happy-holiday/static/css/main.8491bc37.css.map",
+    "main.59a0f8f7.js.map": "/happy-holiday/static/js/main.59a0f8f7.js.map"
   },
   "entrypoints": [
-    "static/css/main.de15ab5e.css",
-    "static/js/main.48420d01.js"
+    "static/css/main.8491bc37.css",
+    "static/js/main.59a0f8f7.js"
   ]
 }
