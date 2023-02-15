@@ -1,30 +1,38 @@
-import { Route, Routes } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 
-import { Card } from "./components/card/Card";
-import { EmptyCard } from "./components/emptyCard/EmptyCard.jsx";
-import { Layout } from "./components/layout/Layout.jsx";
+import { router } from "./router.js";
+import { Loader } from "./components/loader/Loader.jsx";
 
 const App = () => {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={<Layout />}
-      >
-        <Route
-          index
-          element={<EmptyCard />}
-        />
-        <Route
-          path="card/:holiday"
-          element={<Card />}
-        />
-        {/* <Route
-          path="singleCard/:idText/:idImg"
-          element={<Card />}
-        /> */}
-      </Route>
-    </Routes>
+    <RouterProvider
+      router={router}
+      fallbackElement={<Loader />}
+    ></RouterProvider>
+
+    // <div className={styles.wrapper}>
+    //   <Header />
+
+    //   <main className={styles.page}>
+    //     <Routes>
+    //       <Route
+    //         path="card/:holiday"
+    //         element={<Card />}
+    //       />
+    //       <Route
+    //         path="/"
+    //         element={<EmptyCard />}
+    //       />
+
+    //       <Route
+    //         path="singleCard/:idText/:idImg"
+    //         element={<Card />}
+    //       />
+    //     </Routes>
+    //   </main>
+
+    //   <Footer />
+    // </div>
   );
 };
 

@@ -28,7 +28,7 @@ export const imageSlice = createSlice({
     error: '',
     loading: '',
   },
-  reducers: {
+  extraReducers: {
     [fetchImage.pending]: (state) => {
       state.loading = 'loading';
     },

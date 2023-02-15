@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
@@ -18,7 +18,7 @@ export const Card = () => {
       dispatch(fetchTextId(idText));
       dispatch(fetchImageId(idImage));
     }
-  });
+  }, [dispatch, idText, idImage]);
 
   return (
     <div className={styles.card}>

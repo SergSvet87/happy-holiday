@@ -17,7 +17,7 @@ export const holidaysSlice = createSlice({
     error: '',
     loading: '',
   },
-  reducers: {
+  extraReducers: {
     [fetchHolidays.pending]: (state) => {
       state.loading = 'loading';
     },

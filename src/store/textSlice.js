@@ -28,7 +28,7 @@ export const textSlice = createSlice({
     error: '',
     loading: '',
   },
-  reducers: {
+  extraReducers: {
     [fetchText.pending]: (state) => {
       state.loading = 'loading';
       state.text = '';

@@ -8,10 +8,13 @@ import { Header } from "../header/Header";
 import styles from "./Layout.module.css";
 
 export const Layout = () => {
-  const {
-    text: { idText },
-    image: { idImage },
-  } = useSelector((state) => state);
+  // const {
+  //   text: { idText },
+  //   image: { idImage },
+  // } = useSelector((state) => state);
+
+  // console.log("idImage: ", idImage);
+  // console.log("idText: ", idText);
 
   return (
     <div className={styles.wrapper}>
@@ -20,14 +23,16 @@ export const Layout = () => {
       <main className={styles.page}>
         <Outlet />
       </main>
-      {idText && idImage && (
-        <Link
-          className={styles.btn}
-          to={`singleCard/${idText}/${idImage}`}
-        >
-          Поділитися карткою
-        </Link>
-      )}
+
+      {/* {idText && idImage && ( */}
+      <Link
+        className={styles.btn}
+        // to={`singleCard/${idText}/${idImage}`}
+        to={`singleCard/`}
+      >
+        Поділитися карткою
+      </Link>
+      {/* )} */}
 
       <Footer />
     </div>

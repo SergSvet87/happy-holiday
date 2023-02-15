@@ -1,0 +1,28 @@
+.notFound {
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.notFound .image {
+  position: relative;
+}
+
+.notFound .title {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 120px);
+  font-size: 140px;
+}
+
+.notFound .text {
+  margin: 15px 0;
+  font-size: 28px;
+}
+
+.notFound .link {
+  color: #00c78b;
+}
+
+.notFound .link:hover {
+  text-decoration: underline;
+}

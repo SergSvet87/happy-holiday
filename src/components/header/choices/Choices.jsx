@@ -15,6 +15,7 @@ export const Choices = () => {
   // const { holidays } = useContext(holidaysContext);
   const dispatch = useDispatch();
   const { holiday } = useParams();
+  
 
   const toggleChoices = () => {
     if (loading !== "success") return;
@@ -27,7 +28,6 @@ export const Choices = () => {
     if (holiday) {
       dispatch(fetchText(holiday));
       dispatch(fetchImage(holiday));
-
     }
   }, [dispatch, holiday]);
 
@@ -48,6 +48,9 @@ export const Choices = () => {
               className={styles.item}
               key={item[0]}
               onClick={() => {
+                // dispatch(setHoliday(item[0]));
+                // dispatch(fetchText(item[0]));
+                // dispatch(fetchImage(item[0]));
                 toggleChoices();
               }}
             >
